@@ -1,0 +1,394 @@
+:root {
+    --day1-bg-image: url('day1_bg.png');
+    --day2-bg-image: url('day2_bg.png');
+    --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Day 1 Styles (Corporate Tech) */
+.day1-container {
+    min-height: 100vh;
+    background-image: var(--day1-bg-image);
+    background-size: cover;
+    background-position: center;
+    color: #e0f2fe;
+    /* Light blue text */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 20, 40, 0.7);
+    /* Dark blue overlay */
+    z-index: 0;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    width: 90%;
+    padding: 2rem;
+    background: rgba(15, 23, 42, 0.85);
+    /* Glassmorphism dark */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    /* Cyan border */
+    border-radius: 16px;
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.hero-section .subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.credit-card {
+    text-align: center;
+    border-color: rgba(234, 179, 8, 0.3);
+    /* Yellow tint */
+}
+
+.credit-instructions {
+    text-align: left;
+    margin: 1rem auto;
+    max-width: 500px;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.day2-container .credit-instructions {
+    color: #4a044e;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.primary-btn {
+    background: linear-gradient(90deg, #0ea5e9, #2563eb);
+    color: white;
+    margin-top: 1rem;
+}
+
+.primary-btn:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.4);
+}
+
+.secondary-btn {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.secondary-btn:hover {
+    background: rgba(56, 189, 248, 0.2);
+}
+
+.labs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.day2-container .labs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Bigger tiles for Day 2 */
+}
+
+.day1-container .lab-card h3 {
+    margin-top: 0;
+    color: #f0f9ff;
+    font-size: 1.1rem;
+}
+
+
+/* Day 2 Styles (Whimsical 3D) */
+.day2-container {
+    min-height: 100vh;
+    background-image: var(--day2-bg-image);
+    background-size: cover;
+    background-position: center;
+    background-position: center;
+    color: #0c4a6e;
+    /* Dark Sky/Teal text */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    /* Rounder font if available, fallback to sans */
+    overflow-y: auto;
+}
+
+.bg-overlay-day2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    /* Light overlay */
+    z-index: 0;
+}
+
+.day2-container .content-wrapper {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(6, 182, 212, 0.2);
+    /* Cyan shadow */
+    color: #0f766e;
+    /* Teal 700 */
+    max-width: 1200px;
+    /* Increased width for Day 2 */
+    width: 90%;
+    /* Ensure it doesn't touch edges on smaller screens */
+}
+
+.day2-container h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(45deg, #10b981, #06b6d4, #3b82f6);
+    /* Emerald -> Cyan -> Blue */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.day2-container .subtitle {
+    text-align: center;
+    color: #0891b2;
+    /* Cyan 600 */
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.day2-container .card {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    transition: transform 0.2s;
+}
+
+.day2-container .lab-card:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.gif-placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #0891b2;
+    font-weight: 600;
+    border: 2px dashed rgba(6, 182, 212, 0.3);
+}
+
+.level-gif {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.primary-btn-day2 {
+    background: linear-gradient(45deg, #2dd4bf, #38bdf8);
+    /* Teal -> Sky */
+    color: white;
+    border-radius: 50px;
+    /* Pillow shape */
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary-btn-day2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(6, 182, 212, 0.6);
+}
+
+.secondary-btn-day2 {
+    background: white;
+    color: #0891b2;
+    /* Cyan */
+    border: 2px solid #cffafe;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.secondary-btn-day2:hover {
+    background: #ecfeff;
+    border-color: #67e8f9;
+}
+
+.leaderboard-link {
+    text-align: center;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.event-code {
+    font-size: 1.25rem;
+    color: #0c4a6e;
+    /* Dark Sky */
+    background: rgba(255, 255, 255, 0.6);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    /* Pillow to match button */
+    border: 2px solid rgba(6, 182, 212, 0.5);
+    /* Cyan border */
+}
+
+.leaderboard-btn {
+    background: linear-gradient(to right, #fbbf24, #f59e0b);
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+    text-decoration: none;
+}
+
+/* Home Page */
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #0f172a;
+    /* Dark Blue */
+    color: #e2e8f0;
+    /* Light text */
+    gap: 2rem;
+    font-family: var(--font-family);
+}
+
+.home-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    /* Ensure vertical alignment */
+}
+
+.home-nav .btn {
+    min-width: 300px;
+    height: 60px;
+    /* Fixed height */
+    /* Force equal width */
+    text-align: center;
+    border-radius: 50px;
+    /* Unify shape (Pillow) */
+    padding: 0;
+    /* Clear padding */
+    margin: 0;
+    /* Reset margins for alignment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+/* Footer Styles */
+.footer {
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    z-index: 10;
+}
+
+.footer img {
+    height: 30px;
+    /* Small logo size */
+    width: auto;
+}
+
+.day2-container .footer {
+    color: rgba(74, 4, 78, 0.7);
+    /* Dark text for light Day 2 theme */
+    bottom: 1rem;
+}
+
+.home-container .footer {
+    color: rgba(226, 232, 240, 0.7);
+    /* Light text for dark home page */
+}
