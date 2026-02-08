@@ -24,6 +24,7 @@ Verify: Access http://localhost:8080 to confirm container works.
 Replace `${PROJECT_ID}` with your GCP Project ID.
 
 ```bash
+export PROJECT_ID=$(gcloud config get project)
 docker build -t gcr.io/${PROJECT_ID}/waybackhome-website .
 docker push gcr.io/${PROJECT_ID}/waybackhome-website
 ```
