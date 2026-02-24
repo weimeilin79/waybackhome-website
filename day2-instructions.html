@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2: Get Started</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="day2-container">
+        <div class="content-wrapper instruction-container" style="color: #0f766e;">
+            <header class="hero-section">
+                <h1>Setup Instructions</h1>
+                <p class="subtitle" style="color: #0891b2;">Day 2: The Multimodal Frontier</p>
+            </header>
+
+            <!-- Step 1: Credit Instructions -->
+            <div id="modal-step-1" class="modal-step-content">
+                <h3 class="text-xl mb-4 font-bold" style="color: #0d9488;">Objective 1: Claim Credits</h3>
+                <p class="text-sm mb-4">Follow these instructions carefully to provision your workshop resources.</p>
+
+                <div class="text-sm">
+                    <h4 class="text-md mb-3 font-bold" style="color: #115e59;">Before You Start</h4>
+                    <ul class="instruction-list mb-6">
+                        <li>Use a <span style="color: #b45309; font-weight: 600;">personal Gmail account</span>.
+                            Corporate or school-managed accounts will NOT work.</li>
+                        <li>Use Google Chrome in <span style="color: #b45309; font-weight: 600;">Incognito mode</span>
+                            to prevent account conflicts.</li>
+                    </ul>
+
+                    <h4 class="text-md mb-3 font-bold" style="color: #115e59;">Instructions</h4>
+                    <ul class="instruction-list">
+                        <li>Open a new Incognito window, paste your event link, and sign in with your personal Gmail.
+                        </li>
+                        <li>
+                            <div>
+                                <p class="mb-2">Click below to copy your special event link:</p>
+                                <div id="credit-link-container" onclick="copyCreditLink()"
+                                    style="margin-top: 0.25rem; display: flex; align-items: center; background: white; border: 1px solid #99f6e4; border-radius: 0.375rem; padding: 0.5rem; cursor: pointer; position: relative;"
+                                    class="group">
+                                    <span id="credit-link-display"
+                                        style="color: #0d9488; font-family: monospace; font-size: 0.875rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: 0.5rem;">https://goo.gle/d2bwai924</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-clipboard" viewBox="0 0 16 16" style="color: #0d9488;">
+                                        <path
+                                            d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                                        <path
+                                            d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                                    </svg>
+                                    <span id="copy-feedback" class="hidden"
+                                        style="position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); background: #16a34a; color: white; border-radius: 0.25rem; padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: bold;">Copied!</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>Accept the Google Cloud Platform Terms of Service. Once applied, you'll see the message
+                            showing the credit has applied.
+                            <div class="screenshot-placeholder">
+                                <img src="img/credit-applied.png" alt="Credit Applied Screenshot">
+                            </div>
+                        </li>
+                        <li style="color: #0d9488; font-style: italic;">If prompted to enter credit card information,
+                            you can safely ignore it and proceed.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #99f6e4; margin: 2rem 0;">
+
+            <!-- Step 2: Environment Setup -->
+            <div class="setup-section">
+                <h3 class="text-xl mb-4 font-bold" style="color: #0d9488;">Objective 2: Environment Setup</h3>
+                <ul class="instruction-list">
+                    <li>
+                        In the same Incognito window, go to:
+                        <div id="console-link-container" class="credit-link-container group"
+                            onclick="copyToClipboard('console.cloud.google.com', this)"
+                            style="margin-top: 0.5rem; display: flex; align-items: center; background: white; border: 1px solid #99f6e4; border-radius: 0.375rem; padding: 0.5rem; cursor: pointer; position: relative; max-width: 400px;">
+                            <span
+                                style="color: #0d9488; font-family: monospace; font-size: 0.875rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: 0.5rem;">console.cloud.google.com</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-clipboard" viewBox="0 0 16 16" style="color: #0d9488;">
+                                <path
+                                    d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                                <path
+                                    d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                            </svg>
+                            <span class="copy-feedback hidden"
+                                style="position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); background: #16a34a; color: white; border-radius: 0.25rem; padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: bold; z-index: 10;">Copied!</span>
+                        </div>
+                    </li>
+                    <li>Click <strong>Activate Cloud Shell</strong> at the top of the Google Cloud Console (it's the
+                        terminal icon in the top-right navigation bar).
+                        <div class="screenshot-placeholder">
+                            <img src="img/cloud-shell.png" alt="Cloud Shell Icon">
+                        </div>
+                    </li>
+                    <li>In the terminal, run the following commands to clone the setup repository and navigate to the
+                        project:
+                        <div class="terminal-block day2-terminal">
+                            <button class="copy-btn day2-copy-btn" onclick="copyTerminalCommands()">Copy</button>
+                            <pre id="terminal-commands" style="color: #0f766e;">cd ~
+rm -rf 2026-q1-buildwithai
+git clone https://github.com/google-americas/2026-q1-buildwithai.git
+cd 2026-q1-buildwithai/daytwo
+chmod +x init.sh
+./init.sh</pre>
+                        </div>
+                    </li>
+                    <li>
+                        Go to:
+                        <div id="billing-link-container" class="credit-link-container group"
+                            onclick="copyToClipboard('console.cloud.google.com/billing/projects', this)"
+                            style="margin-top: 0.5rem; display: flex; align-items: center; background: white; border: 1px solid #99f6e4; border-radius: 0.375rem; padding: 0.5rem; cursor: pointer; position: relative; max-width: 400px;">
+                            <span
+                                style="color: #0d9488; font-family: monospace; font-size: 0.875rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: 0.5rem;">console.cloud.google.com/billing/projects</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-clipboard" viewBox="0 0 16 16" style="color: #0d9488;">
+                                <path
+                                    d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                                <path
+                                    d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                            </svg>
+                            <span class="copy-feedback hidden"
+                                style="position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); background: #16a34a; color: white; border-radius: 0.25rem; padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: bold; z-index: 10;">Copied!</span>
+                        </div>
+                        in the same Incognito window. You should see that your newly created project has a billing
+                        account assigned.
+                        <div class="screenshot-placeholder" style="margin-top: 1rem;">
+                            <img src="img/day2-verify.png" alt="Billing Verification">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center;">
+                <a href="day2.html" class="btn secondary-btn-day2" style="width: auto; display: inline-block;">Back to
+                    Day 2</a>
+            </div>
+        </div>
+        <footer class="footer">
+            <span>Brought to you by</span>
+            <img src="logo.png" alt="Build with AI">
+        </footer>
+        <div class="bg-overlay-day2"></div>
+    </div>
+
+    <script>
+        function copyCreditLink() {
+            const linkText = document.getElementById('credit-link-display').innerText;
+            navigator.clipboard.writeText(linkText).then(() => {
+                const feedback = document.getElementById('copy-feedback');
+                feedback.classList.remove('hidden');
+                setTimeout(() => {
+                    feedback.classList.add('hidden');
+                }, 2000);
+            });
+        }
+
+        function copyTerminalCommands() {
+            const commands = document.getElementById('terminal-commands').innerText;
+            navigator.clipboard.writeText(commands).then(() => {
+                const btn = document.querySelector('.terminal-block .copy-btn');
+                const originalText = btn.innerText;
+                btn.innerText = 'Copied!';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                }, 2000);
+            });
+        }
+        function copyToClipboard(text, el) {
+            navigator.clipboard.writeText(text).then(() => {
+                const feedback = el.querySelector('.copy-feedback');
+                if (feedback) {
+                    feedback.classList.remove('hidden');
+                    setTimeout(() => {
+                        feedback.classList.add('hidden');
+                    }, 2000);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -392,3 +392,120 @@ body {
     color: rgba(226, 232, 240, 0.7);
     /* Light text for dark home page */
 }
+
+/* Instruction Page Specific Styles */
+.instruction-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.instruction-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.instruction-list li {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.instruction-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    color: inherit;
+    font-weight: bold;
+}
+
+.screenshot-placeholder {
+    margin: 1rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.screenshot-placeholder img {
+    width: 100%;
+    display: block;
+}
+
+.terminal-block {
+    background: #0f172a;
+    border-radius: 8px;
+    padding: 3rem 1rem 1rem 1rem;
+    /* Increased top padding */
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    position: relative !important;
+    /* Force relative positioning */
+    overflow-x: auto;
+    display: block;
+}
+
+.terminal-block pre {
+    margin: 0;
+    color: #e2e8f0;
+}
+
+.terminal-block .copy-btn {
+    position: absolute !important;
+    top: 0.75rem !important;
+    right: 0.75rem !important;
+    left: auto !important;
+    /* Ensure it stays on the right */
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    color: #38bdf8;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 100;
+    /* Higher z-index */
+    transition: all 0.2s ease;
+}
+
+.credit-link-container:hover {
+    border-color: #fbbf24 !important;
+}
+
+.day2-container .credit-link-container:hover {
+    border-color: #0d9488 !important;
+    background: #f0fdfa !important;
+}
+
+/* Day 2 specific terminal overrides */
+.day2-terminal {
+    background: white !important;
+    border-color: #99f6e4 !important;
+}
+
+.day2-terminal pre {
+    color: #0f766e !important;
+}
+
+.day2-copy-btn {
+    background: #f0fdfa !important;
+    border-color: #99f6e4 !important;
+    color: #0891b2 !important;
+}
+
+.day2-copy-btn:hover {
+    background: #ccfbf1 !important;
+    color: #0d9488 !important;
+}
+
+#credit-link-container:hover {
+    border-color: #fbbf24;
+}
+
+.hidden {
+    display: none !important;
+}
