@@ -509,3 +509,35 @@ body {
 .hidden {
     display: none !important;
 }
+
+/* Support Section Styles */
+.support-section {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.support-card {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(30, 41, 59, 0.8);
+}
+
+.day2-container .support-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #cffafe;
+    color: #0f766e;
+}
+
+.support-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.support-card p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
