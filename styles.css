@@ -541,3 +541,168 @@ body {
     font-size: 1rem;
     line-height: 1.6;
 }
+
+/* Stepped Instruction Styles */
+.steps-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.steps-indicator::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: rgba(148, 163, 184, 0.2);
+    z-index: 0;
+}
+
+.step-dot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 1;
+    position: relative;
+}
+
+.dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #1e293b;
+    border: 2px solid #475569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #94a3b8;
+    transition: all 0.3s ease;
+}
+
+.step-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #64748b;
+    transition: all 0.3s ease;
+}
+
+.step-dot.active .dot {
+    background: #38bdf8;
+    border-color: #38bdf8;
+    color: white;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+.step-dot.active .step-label {
+    color: #38bdf8;
+}
+
+.step-dot.completed .dot {
+    background: #16a34a;
+    border-color: #16a34a;
+    color: white;
+}
+
+/* Day 2 Theme Overrides for Steps */
+.day2-container .dot {
+    background: white;
+    border-color: #99f6e4;
+    color: #0d9488;
+}
+
+.day2-container .step-dot.active .dot {
+    background: #0d9488;
+    border-color: #0d9488;
+    color: white;
+    box-shadow: 0 0 15px rgba(13, 148, 136, 0.3);
+}
+
+.day2-container .step-label {
+    color: #0d9488;
+    opacity: 0.6;
+}
+
+.day2-container .step-dot.active .step-label {
+    color: #0d9488;
+    opacity: 1;
+}
+
+.step-content {
+    display: none;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.step-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.step-nav-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day2-container .step-nav-footer {
+    border-top-color: #99f6e4;
+}
+
+.next-step-btn {
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.next-step-btn:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+}
+
+.day2-container .next-step-btn {
+    background: linear-gradient(45deg, #0d9488, #06b6d4);
+    border-radius: 50px;
+}
+
+.prev-step-link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.prev-step-link:hover {
+    color: #38bdf8;
+}
+
+.day2-container .prev-step-link {
+    color: #0d9488;
+    opacity: 0.7;
+}
+
+.day2-container .prev-step-link:hover {
+    opacity: 1;
+}
